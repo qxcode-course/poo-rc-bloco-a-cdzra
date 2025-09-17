@@ -1,0 +1,29 @@
+{
+    "patches": [
+        {
+            "label": "2025-09-17_14-09-38",
+            "content": "@@ -1,268 +1,12 @@\n-%0A%0Aclass Towel:%0A    def __init__(self, color: str, size: str):%0A        self.color: str = %22%22%0A        self.size: str = %22%22%0A        self.wetness: str = %22%22%0A%0Aprint(%22Qual a cor da sua toalha%22)%0Acolor=input()%0Atowel : Towel = Towel(%22blue%22,%22P%22)%0Aprint(%22Sua toalha %C3%A9 %7Btowel.color%7D\n+print(%22aba\n %22)\n",
+            "lines": "1"
+        },
+        {
+            "label": "2025-09-17_14-44-54",
+            "content": "@@ -214,21 +214,22 @@\n = Towel(\n-color\n+%22blue%22\n ,%22P%22)%0Apr\n",
+            "lines": "12"
+        },
+        {
+            "label": "2025-09-17_14-45-38",
+            "content": "@@ -231,17 +231,16 @@\n )%0Aprint(\n-f\n %22Sua toa\n",
+            "lines": "12"
+        },
+        {
+            "label": "2025-09-17_14-46-13",
+            "content": "@@ -81,21 +81,18 @@\n : str = \n-color\n+%22%22\n %0A       \n@@ -109,20 +109,18 @@\n : str = \n-size\n+%22%22\n %0A       \n@@ -138,15 +138,16 @@\n ss: \n-int = 0\n+str = %22%22\n %0A%0Apr\n@@ -196,21 +196,8 @@\n t()%0A\n-size=input()%0A\n towe\n@@ -220,20 +220,19 @@\n l(color,\n-size\n+%22P%22\n )%0Aprint(\n@@ -263,21 +263,6 @@\n lor%7D\n- e %7Btowel.size%7D\n %22)\n",
+            "lines": "12"
+        },
+        {
+            "label": "2025-09-17_14-52-32",
+            "content": "\n\nclass Towel:\n    def __init__(self, color: str, size: str):\n        self.color: str = color\n        self.size: str = size\n        self.wetness: int = 0\n\nprint(\"Qual a cor da sua toalha\")\ncolor=input()\nsize=input()\ntowel : Towel = Towel(color,size)\nprint(f\"Sua toalha \u00e9 {towel.color} e {towel.size}\")",
+            "lines": "13"
+        }
+    ]
+}

@@ -5,12 +5,7 @@ filter:
 - BLOCO_B
 version: 0.0.1
 database: database
-expanded:
-- bloco_a-práticas-com-o-git
-- bloco_a-treino-de-algoritmos
-- campanha-principal
-- bloco_b-primeiras-classes
-- configuracao-e-aquecimento
+expanded: []
 tasks: {}
 flags:
   quests: 0

@@ -9,5 +9,6 @@ class Towel:
 print("Qual a cor e o tamanhoqq da sua toalha")
 color=input()
 size=input()
+
 towel : Towel = Towel(color,size)
 print(f"Sua toalha é {towel.color} e {towel.size}")

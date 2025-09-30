@@ -1,0 +1,9 @@
+{
+    "patches": [
+        {
+            "label": "2025-09-30_14-23-43",
+            "content": "class Animal:\n    def __init__(self, specie: str, sound: str):\n        self.specie: str = specie\n        self.sound: str = sound\n        self.age: int = 0\n\n    def __str__(self) -> str:\n        return f\"{self.specie}:{self.age}:{self.sound}\"\n    \n    def ageBy(self,increment: int) -> None:\n        if self.age == 4:\n            print(f\"warning: {self.specie} morreu\")\n            return\n        self.age += increment\n        if self.age >= 4:\n            self.age = 4\n            print(f\"warning: {self.specie} morreu\")\n\n    def isMakeSound(self) -> str:\n        if self.age == 0:\n            return \"---\"\n        elif self.age == 1:\n            return f\"{self.sound}\"\n        elif self.age == 2:\n            return f\"{self.sound}\"\n        elif self.age == 3:\n            return f\"{self.sound}\"\n        return \"RIP\"\n    \ndef main():\n    animal: Animal = Animal(\"\", \"\")\n    while True:\n\n        line: str = input()\n        print(\"$\" + line)\n        args: list[str] = line.split(\" \")\n\n        if args[0] == \"end\":\n            break\n        elif args[0] == \"init\":\n            species: str = args[1]\n            sound: str = args[2]\n            animal = Animal(species,sound)\n        elif args[0] == \"grow\":\n            increment: int = int(args[1])\n            animal.ageBy(increment)\n        elif args[0] == \"noise\":\n            print(animal.isMakeSound())\n        elif args[0] == \"show\":\n            print(animal)\n\nmain()             ",
+            "lines": "52"
+        }
+    ]
+}

@@ -10,6 +10,7 @@ expanded:
 - bloco_b-primeiras-classes
 tasks:
   animal: '{rate:100}'
+  carro: '{rate:10}'
   enxugar: '{rate:100}'
 flags:
   quests: 0
@@ -17,4 +18,4 @@ flags:
   tasks: 0
   graph: 0
   xray: 0
-index: animal
+index: carro

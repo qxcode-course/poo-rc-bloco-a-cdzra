@@ -1,0 +1,19 @@
+{
+    "patches": [
+        {
+            "label": "2025-09-30_16-12-13",
+            "content": "@@ -163,14 +163,8 @@\n n f%22\n-pass: \n %7Bsel\n@@ -173,39 +173,28 @@\n pas%7D\n-, gas: %7Bself.gas%7D, km: \n+:%7Bself.km%7D:\n %7Bself.\n-km\n+gas\n %7D%22%0A \n",
+            "lines": "32"
+        },
+        {
+            "label": "2025-09-30_16-15-26",
+            "content": "@@ -701,120 +701,8 @@\n eak%0A\n-        elif args%5B0%5D == %22enter%22:%0A            increment: int = int(args%5B1%5D)%0A            carro.embarca(increment)%0A\n     \n",
+            "lines": "32"
+        },
+        {
+            "label": "2025-09-30_16-20-00",
+            "content": "class Carro:\n    def __init__(self):\n        self.pas: int = 0\n        self.km: int = 0\n        self.gas: int = 0\n    \n    def __str__(self) -> str:\n        return f\"pass: {self.pas}, gas: {self.gas}, km: {self.km}\"\n    \n    def embarca(self,increment: int) -> None:\n        if self.pas == 2:\n            print(f\"fail: limite de pessoas atingido\")\n            return\n        self.pas += increment\n        if self.pas >= 2:\n            self.pas = 2\n            print(f\"fail: limite de pessoas atingido\")\n\ndef main():\n    carro: Carro = Carro()\n    while True:\n\n        line: str = input()\n        print(\"$\" + line)\n        args: list[str] = line.split(\" \")\n\n        if args[0] == \"end\":\n            break\n        elif args[0] == \"enter\":\n            increment: int = int(args[1])\n            carro.embarca(increment)\n        elif args[0] == \"show\":\n            print(carro)\n\nmain()",
+            "lines": "35"
+        }
+    ]
+}

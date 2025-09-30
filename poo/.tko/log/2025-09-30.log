@@ -2,3 +2,15 @@
 2025-09-30 14:23:41, MOVE, v:1, k:animal, mode:PICK
 2025-09-30 14:23:43, EXEC, v:1, k:animal, mode:FULL, rate:100, size:52
 2025-09-30 14:23:47, MOVE, v:1, k:animal, mode:BACK
+2025-09-30 15:32:13, MOVE, v:1, k:carro, mode:DOWN
+2025-09-30 16:12:10, MOVE, v:1, k:carro, mode:PICK
+2025-09-30 16:12:13, EXEC, v:1, k:carro, mode:FULL, rate:0, size:32
+2025-09-30 16:12:19, EXEC, v:1, k:carro, mode:FREE
+2025-09-30 16:15:26, EXEC, v:1, k:carro, mode:FULL, rate:10, size:32
+2025-09-30 16:17:44, MOVE, v:1, k:carro, mode:BACK
+2025-09-30 16:17:58, MOVE, v:1, k:animal, mode:PICK
+2025-09-30 16:18:00, EXEC, v:1, k:animal, mode:FULL, rate:100
+2025-09-30 16:18:31, MOVE, v:1, k:animal, mode:BACK
+2025-09-30 16:18:33, MOVE, v:1, k:carro, mode:PICK
+2025-09-30 16:20:00, EXEC, v:1, k:carro, mode:FULL, rate:10, size:35
+2025-09-30 16:21:47, MOVE, v:1, k:carro, mode:BACK

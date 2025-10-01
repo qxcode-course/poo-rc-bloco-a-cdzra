@@ -12,8 +12,38 @@
         },
         {
             "label": "2025-09-30_16-20-00",
-            "content": "class Carro:\n    def __init__(self):\n        self.pas: int = 0\n        self.km: int = 0\n        self.gas: int = 0\n    \n    def __str__(self) -> str:\n        return f\"pass: {self.pas}, gas: {self.gas}, km: {self.km}\"\n    \n    def embarca(self,increment: int) -> None:\n        if self.pas == 2:\n            print(f\"fail: limite de pessoas atingido\")\n            return\n        self.pas += increment\n        if self.pas >= 2:\n            self.pas = 2\n            print(f\"fail: limite de pessoas atingido\")\n\ndef main():\n    carro: Carro = Carro()\n    while True:\n\n        line: str = input()\n        print(\"$\" + line)\n        args: list[str] = line.split(\" \")\n\n        if args[0] == \"end\":\n            break\n        elif args[0] == \"enter\":\n            increment: int = int(args[1])\n            carro.embarca(increment)\n        elif args[0] == \"show\":\n            print(carro)\n\nmain()",
+            "content": "@@ -501,288 +501,8 @@\n %22)%0A%0A\n-    def desembarca(self,increment: int) -%3E None:%0A        if self.pas == 0:%0A            print(f%22fail: nao ha ninguem no carro%22)%0A            return%0A        self.pas -= increment%0A        if self.pas %3C= 0:%0A            self.pas = 0%0A            print(f%22fail: nao ha ninguem no carro%22)%0A%0A\n def \n",
             "lines": "35"
+        },
+        {
+            "label": "2025-10-01_15-25-32",
+            "content": "@@ -1048,17 +1048,17 @@\n nt(args%5B\n-0\n+1\n %5D)%0A     \n",
+            "lines": "44"
+        },
+        {
+            "label": "2025-10-01_15-26-03",
+            "content": "@@ -284,21 +284,10 @@\n pas \n-+ increment %3E\n+==\n  2:%0A\n@@ -337,32 +337,47 @@\n  atingido%22)%0A    \n+        return%0A\n         self.pas\n@@ -381,24 +381,45 @@\n pas \n++\n = \n-2%0A        else\n+increment%0A        if self.pas %3E= 2\n :%0A  \n@@ -437,28 +437,74 @@\n elf.pas \n-+\n = \n-increment\n+2%0A            print(f%22fail: limite de pessoas atingido%22)\n %0A%0A    de\n@@ -570,21 +570,10 @@\n pas \n-- increment %3C\n+==\n  0:%0A\n@@ -620,32 +620,47 @@\n  no carro%22)%0A    \n+        return%0A\n         self.pas\n@@ -664,24 +664,45 @@\n pas \n+-\n = \n-0%0A        else\n+increment%0A        if self.pas %3C= 0\n :%0A  \n@@ -720,28 +720,71 @@\n elf.pas \n--\n = \n-increment\n+0%0A            print(f%22fail: nao ha ninguem no carro%22)\n %0A%0Adef ma\n@@ -1052,9 +1052,9 @@\n rgs%5B\n-1\n+0\n %5D)%0A \n",
+            "lines": "44"
+        },
+        {
+            "label": "2025-10-01_15-32-30",
+            "content": "@@ -871,16 +871,58 @@\n enter%22:%0A\n+            increment: int = int(args%5B1%5D)%0A\n         \n@@ -941,26 +941,23 @@\n barca(in\n-t(args%5B1%5D)\n+crement\n )%0A      \n",
+            "lines": "40"
+        },
+        {
+            "label": "2025-10-01_15-34-59",
+            "content": "@@ -875,50 +875,8 @@\n r%22:%0A\n-            increment: int = int(args%5B1%5D)%0A\n     \n@@ -899,23 +899,26 @@\n barca(in\n-crement\n+t(args%5B1%5D)\n )%0A      \n",
+            "lines": "39"
+        },
+        {
+            "label": "2025-10-01_15-38-12",
+            "content": "@@ -909,17 +909,17 @@\n nt(args%5B\n-0\n+1\n %5D)%0A     \n",
+            "lines": "40"
+        },
+        {
+            "label": "2025-10-01_15-53-05",
+            "content": "class Carro:\n    def __init__(self):\n        self.pas: int = 0\n        self.km: int = 0\n        self.gas: int = 0\n    \n    def __str__(self) -> str:\n        return f\"pass: {self.pas}, gas: {self.gas}, km: {self.km}\"\n    \n    def embarca(self,increment: int) -> None:\n        if self.pas + increment > 2:\n            print(f\"fail: limite de pessoas atingido\")\n            self.pas = 2\n        else:\n            self.pas += increment\n\n    def desembarca(self,increment: int) -> None:\n        if self.pas - increment < 0:\n            print(f\"fail: nao ha ninguem no carro\")\n            self.pas = 0\n        else:\n            self.pas -= increment\n\ndef main():\n    carro: Carro = Carro()\n    while True:\n\n        line: str = input()\n        print(\"$\" + line)\n        args: list[str] = line.split(\" \")\n\n        if args[0] == \"end\":\n            break\n        elif args[0] == \"enter\":\n            increment: int = int(args[0])\n            carro.embarca(increment)\n        elif args[0] == \"show\":\n            print(carro)\n\nmain()",
+            "lines": "40"
         }
     ]
 }

@@ -8,13 +8,18 @@ class Carro:
         return f"pass: {self.pas}, gas: {self.gas}, km: {self.km}"
     
     def embarca(self,increment: int) -> None:
-        if self.pas == 2:
+        if self.pas + increment > 2:
             print(f"fail: limite de pessoas atingido")
-            return
-        self.pas += increment
-        if self.pas >= 2:
             self.pas = 2
-            print(f"fail: limite de pessoas atingido")
+        else:
+            self.pas += increment
+
+    def desembarca(self,increment: int) -> None:
+        if self.pas - increment < 0:
+            print(f"fail: nao ha ninguem no carro")
+            self.pas = 0
+        else:
+            self.pas -= increment
 
 def main():
     carro: Carro = Carro()
@@ -27,7 +32,7 @@ def main():
         if args[0] == "end":
             break
         elif args[0] == "enter":
-            increment: int = int(args[1])
+            increment: int = int(args[0])
             carro.embarca(increment)
         elif args[0] == "show":
             print(carro)

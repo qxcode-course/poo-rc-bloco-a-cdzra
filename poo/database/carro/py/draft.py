@@ -11,16 +11,17 @@ class Carro:
         if self.pas + increment > 2:
             print(f"fail: limite de pessoas atingido")
             self.pas = 2
-        else:
-            self.pas += increment
+            return
+        self.pas += increment
 
     def desembarca(self,increment: int) -> None:
         if self.pas - increment < 0:
             print(f"fail: nao ha ninguem no carro")
             self.pas = 0
-        else:
-            self.pas -= increment
-
+            return
+        self.pas -= increment
+        
+        
 def main():
     carro: Carro = Carro()
     while True:

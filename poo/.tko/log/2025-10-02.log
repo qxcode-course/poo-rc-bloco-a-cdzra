@@ -18,3 +18,10 @@
 2025-10-02 14:01:42, EXEC, v:1, k:calculadora, mode:FREE, size:26
 2025-10-02 14:01:56, EXEC, v:1, k:calculadora, mode:FULL, rate:0
 2025-10-02 14:07:22, MOVE, v:1, k:calculadora, mode:BACK
+2025-10-02 14:59:18, MOVE, v:1, k:calculadora, mode:PICK
+2025-10-02 14:59:19, EXEC, v:1, k:calculadora, mode:FULL, rate:0, size:54
+2025-10-02 15:05:05, EXEC, v:1, k:calculadora, mode:FULL, rate:0, size:65
+2025-10-02 15:05:56, EXEC, v:1, k:calculadora, mode:FULL, rate:100, size:61
+2025-10-02 15:09:47, EXEC, v:1, k:calculadora, mode:FULL, rate:100, size:65
+2025-10-02 15:10:42, EXEC, v:1, k:calculadora, mode:FULL, rate:100
+2025-10-02 15:10:47, MOVE, v:1, k:calculadora, mode:BACK

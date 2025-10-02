@@ -1,0 +1,9 @@
+{
+    "patches": [
+        {
+            "label": "2025-10-02_14-01-42",
+            "content": "class Calculadora:\n    def __init__(self,batteryMax: int):\n        self.batteryMax : int = batteryMax\n        self.battery: int = 0\n        self.display: float = 0\n\n    def _str__(self):\n        return f\"display = {self.display:.2f}, battery = {self.battery}\"\n    \ndef main():\n    calculadora : Calculadora = Calculadora(\"\")\n    \n    while True:\n\n        line = input()\n        print(\"$\" + line)\n        args: list[str] = line.split(\" \")\n\n        if args[0] == \"end\":\n            break\n        elif args[0] == \"show\":\n            print(calculadora)\n\n\n\nmain()",
+            "lines": "26"
+        }
+    ]
+}

@@ -67,6 +67,16 @@
         },
         {
             "label": "2025-10-02_13-27-14",
+            "content": "@@ -1586,33 +1586,32 @@\n             \n-increment\n+distance\n  = int(args%5B\n@@ -1639,25 +1639,24 @@\n .viagem(\n-increment\n+distance\n )%0A      \n",
+            "lines": "65"
+        },
+        {
+            "label": "2025-10-02_13-45-18",
+            "content": "@@ -1590,24 +1590,25 @@\n         \n-distance\n+increment\n  = int(a\n@@ -1640,24 +1640,25 @@\n .viagem(\n-distance\n+increment\n )%0A      \n",
+            "lines": "65"
+        },
+        {
+            "label": "2025-10-02_13-48-39",
             "content": "class Carro:\n    def __init__(self, pas: int = 0, km: int = 0, gas: int = 0):\n        self.pas = pas\n        self.km = km\n        self.gas = gas\n    \n    def __str__(self) -> str:\n        return f\"pass: {self.pas}, gas: {self.gas}, km: {self.km}\"\n    \n    def maxPas(self):\n        if self.pas < 2:\n            self.pas += 1\n        else:\n            print(\"fail: limite de pessoas atingido\")\n        \n    def sair(self):\n        if self.pas == 0:\n            print(\"fail: nao ha ninguem no carro\")\n        else:\n            self.pas -= 1\n\n    def maxGas(self,increment: int):\n        self.gas += increment\n        if self.gas > 100:\n            self.gas = 100\n\n    def viagem(self,distance: int):\n        if self.pas == 0:\n            print(\"fail: nao ha ninguem no carro\")\n        elif self.gas == 0:\n            print(\"fail: tanque vazio\")\n        else:\n            if distance > self.gas:\n                print(f\"fail: tanque vazio apos andar {self.gas} km\")\n                self.km += self.gas\n                self.gas = 0\n            else:\n                self.km += distance\n                self.gas -= distance\n\n        \ndef main():\n    carro: Carro = Carro()\n    while True:\n\n        line: str = input()\n        print(\"$\" + line)\n        args: list[str] = line.split(\" \")\n\n        if args[0] == \"end\":\n            break\n        elif args[0] == \"enter\":\n            carro.maxPas()\n        elif args[0] == \"leave\":\n            carro.sair()\n        elif args[0] == \"fuel\":\n            increment = int(args[1])\n            carro.maxGas(increment)\n        elif args[0] == \"drive\":\n            distance = int(args[1])\n            carro.viagem(distance)\n        elif args[0] == \"show\":\n            print(carro)\n\nmain()",
             "lines": "65"
         }

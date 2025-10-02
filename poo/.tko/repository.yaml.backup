@@ -10,12 +10,12 @@ expanded:
 - bloco_b-primeiras-classes
 tasks:
   animal: '{rate:100}'
-  carro: '{rate:10}'
+  carro: '{rate:100}'
   enxugar: '{rate:100}'
 flags:
   quests: 0
   tracks: 0
   tasks: 0
-  graph: 0
+  graph: 1
   xray: 0
 index: calculadora
